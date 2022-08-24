@@ -5,5 +5,5 @@ while i > 96:
         print("{}".format(chr(i)), end='')
     else:
         num = i - 32
-        print("{}".format(chr(i)), end='')
+        print("{}".format(chr(num)), end='')
     i -= 1
