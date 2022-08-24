@@ -6,4 +6,4 @@ while i > 96:
     else:
         num = i - 32
         print("{}".format(chr(num)), end='')
-    i += 1
+        i += 1
