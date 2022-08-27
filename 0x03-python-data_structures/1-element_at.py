@@ -6,4 +6,3 @@ def element_at(my_list, idx):
     else:
         elem = my_list[idx]
         return elem
-        
