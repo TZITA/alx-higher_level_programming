@@ -35,4 +35,3 @@ if __name__ == "__main__":
         if sys.argv[2] == d:
             div1 = div(int(sys.argv[1]), int(sys.argv[3]))
             print("{} / {} = {}".format(sys.argv[1], sys.argv[3], div1))
-        
