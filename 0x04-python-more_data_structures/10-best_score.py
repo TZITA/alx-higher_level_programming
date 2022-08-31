@@ -3,11 +3,10 @@ def best_score(a_dictionary):
     if a_dictionary is None:
         return None
     else:
-        a = list(a_dictionary)
-        for i in range(len(a_dictionary)):
-            k, max_val = a[0], a_dictionary[a[0]]
-            if a_dictionary[a[i]] is None:
-                return None
-            elif a_dictionary[a[i]] > max_val:
-                k, max_val = a[i], a_dictionary[a[i]]
-        return k
+        lis = list(a_dictionary)
+        max_val = a_dictionary[lis[0]]
+        for k in lis:
+           if a_dictionary[k] > max_val:
+               max_val = a_dictionary[k]
+        key = {k for k, v in a_dictionary.items() if v == max_val}
+        return list(key)[0]
