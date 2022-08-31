@@ -8,5 +8,8 @@ def best_score(a_dictionary):
         for k in lis:
             if a_dictionary[k] > max_val:
                 max_val = a_dictionary[k]
-        key = {k for k, v in a_dictionary.items() if v == max_val}
-        return list(key)[0]
+        if max_val > 0:
+            key = {k for k, v in a_dictionary.items() if v == max_val}
+            return list(key)[0]
+        else:
+            return None
