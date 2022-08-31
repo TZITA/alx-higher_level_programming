@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
     cp_matrix = matrix.copy()
-    sqlist = [[row[i] for row in cp_matrix] for i in range(len(matrix))]
-    for j in range(len(sqlist)):
-        for k in range(len(sqlist[j])):
-            sqlist[j][k] *= sqlist[j][k]
-    return sqlist
+    listoflist = []
+    for i in range(len(cp_matrix)):
+        listoflist.append(cp_matrix[i])
+    for j in range(len(listoflist)):
+        for k in range(len(listoflist[j])):
+            listoflist[j][k] *= listoflist[j][k]
+    return listoflist
