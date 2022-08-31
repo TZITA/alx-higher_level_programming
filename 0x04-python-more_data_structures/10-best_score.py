@@ -6,6 +6,8 @@ def best_score(a_dictionary):
         a = list(a_dictionary)
         for i in range(len(a_dictionary)):
             k, max_val = a[0], a_dictionary[a[0]]
-            if a_dictionary[a[i]] > max_val:
+            if a_dictionary[a[i]] is None:
+                return None
+            elif a_dictionary[a[i]] > max_val:
                 k, max_val = a[i], a_dictionary[a[i]]
         return k
