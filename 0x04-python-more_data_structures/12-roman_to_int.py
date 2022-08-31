@@ -9,9 +9,15 @@ def roman_to_int(roman_string):
             if roman_string[i] == "I":
                 tobeadded.append(1)
             elif roman_string[i] == "V":
-                tobeadded.append(5)
+                if i > 0 and roman_string[i - 1] == "I":
+                    tobeadded.append(3)
+                else:
+                    tobeadded.append(5)
             elif roman_string[i] == "X":
-                tobeadded.append(10)
+                if roman_string[i - 1] == "I":
+                    tobeadded.append(8)
+                else:
+                    tobeadded.append(10)
             elif roman_string[i] == "L":
                 tobeadded.append(50)
             elif roman_string[i] == "C":
