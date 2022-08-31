@@ -6,7 +6,7 @@ def roman_to_int(roman_string):
         tobeadded = []
         sum1 = 0
         for i in range(len(roman_string)):
-            if roman_string[i] =="I":
+            if roman_string[i] == "I":
                 tobeadded.append(1)
             elif roman_string[i] == "V":
                 tobeadded.append(5)
