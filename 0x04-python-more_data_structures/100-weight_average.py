@@ -2,9 +2,9 @@
 def weight_average(my_list=[]):
     if len(my_list) == 0:
         return 0
-    else:     
+    else:
         sum1 = 0
-        sum2 = 0 
+        sum2 = 0
         mul = []
         for i in range(len(my_list)):
             for j in range(len(my_list[0])):
