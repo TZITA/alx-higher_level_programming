@@ -18,8 +18,8 @@ void print_python_list(PyObject *p)
 	PyVarObject *var = (PyVarObject *)p;
 	const char *type;
 
-	s = var->ob_size;
-	a = list->allocated;
+	size = var->ob_size;
+	alloc = list->allocated;
 
 	fflush(stdout);
 	printf("[*] Python list info\n");
