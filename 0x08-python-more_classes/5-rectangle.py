@@ -5,7 +5,7 @@
 class Rectangle:
     """Rectangle rep."""
 
-     def __init__(self, width=0, height=0):
+    def __init__(self, width=0, height=0):
         """Initialize a Rectangle.
         Attributes:
             width (int): The width of the new rectangle.
@@ -51,7 +51,7 @@ class Rectangle:
         return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-        """Return representation of the Rectangle.""" 
+        """Return representation of the Rectangle."""
         if self.__width == 0 or self.__height == 0:
             return ("")
 
