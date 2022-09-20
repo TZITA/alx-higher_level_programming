@@ -12,7 +12,6 @@ class Rectangle:
     number_of_instances = 0
     print_symbol = "#"
 
-
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle.
         Attributes:
@@ -35,7 +34,6 @@ class Rectangle:
         if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
-
 
     @property
     def height(self):
