@@ -147,3 +147,4 @@ The method assumes the paramter ``name`` will be a string, but ``name`` of any t
     >>> bg.integer_validator({"a": 1}, (1, 2))
     Traceback (most recent call last):
     TypeError: {'a': 1} must be an integer
+
