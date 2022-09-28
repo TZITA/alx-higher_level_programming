@@ -28,7 +28,7 @@ def print_stats(size, status_codes):
                 else:
                     cnt += 1
 
-                line - line.split()
+                line = line.split()
 
                 try:
                     size += int(line[-1])
