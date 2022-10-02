@@ -93,24 +93,42 @@ class Rectangle(Base):
             [print("#", end="") for j in range(self.width)]
             print("")
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Assigns an argument to atributes id, width, height, x and y."""
-        count = 0
-        for arg in args:
-            if count == 0:
-                if arg is None:
-                    self.__init__(self.width, self.height, self.x, self.y)
-                else:
-                    self.id = arg
-            elif count == 1:
-                self.width = arg
-            elif count == 2:
-                self.height = arg
-            elif count == 3:
-                self.x = arg
-            elif count == 4:
-                self.y = arg
-            count += 1
+        if args and len(args) != 0:
+            count = 0
+            for arg in args:
+                if count == 0:
+                    if arg is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = arg
+                elif count == 1:
+                    self.width = arg
+                elif count == 2:
+                    self.height = arg
+                elif count == 3:
+                    self.x = arg
+                elif count == 4:
+                    self.y = arg
+                count += 1
+
+        elif kwargs and len(kwargs) != 0:
+            for k, v in kwargs.items():
+                if k == "id":
+                    if v is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = v
+                elif k == "width":
+                    self.width = v
+                elif k == "height":
+                    self.height = v
+                elif k == "x":
+                    self.x = v
+                elif k == "y":
+                    self.y = v
+
 
     def __str__(self):
         """String rep of the rectangle object."""
