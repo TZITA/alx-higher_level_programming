@@ -93,6 +93,25 @@ class Rectangle(Base):
             [print("#", end="") for j in range(self.width)]
             print("")
 
+    def update(self, *args):
+        """Assigns an argument to atributes id, width, height, x and y."""
+        count = 0
+        for arg in args:
+            if count == 0:
+                if arg is None:
+                    self.__init__(self.width, self.height, self.x, self.y)
+                else:
+                    self.id = arg
+            elif count == 1:
+                self.width = arg
+            elif count == 2:
+                self.height = arg
+            elif count == 3:
+                self.x = arg
+            elif count == 4:
+                self.y = arg
+            count += 1
+
     def __str__(self):
         """String rep of the rectangle object."""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
