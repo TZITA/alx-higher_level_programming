@@ -15,7 +15,7 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-    
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """Returns the JSON string representation of list of dictionaries.
@@ -100,9 +100,9 @@ class Base:
         filen = cls.__name__ + ".csv"
         try:
             with open(filen, "r", newline="") as file_n:
-                if cls.__name__ == "Rectangle":               
+                if cls.__name__ == "Rectangle":
                     fieldnames = ["id", "width", "height", "x", "y"]
-                else:          
+                else:
                     fieldnames = ["id", "size", "x", "y"]
                 list_dicts = csv.DictReader(file_n, fieldnames=fieldnames)
                 list_dicts = [dict([k, int(v)] for k, v in d.items())
