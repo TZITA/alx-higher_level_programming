@@ -139,7 +139,8 @@ class Rectangle(Base):
                 "y": self.y
                 }
 
-
     def __str__(self):
         """String rep of the rectangle object."""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.x, self.y,
+                                                       self.width, self.height)
