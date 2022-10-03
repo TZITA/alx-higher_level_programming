@@ -35,10 +35,12 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """Assigns attributes.
         Attributes:
-            1. id: id
-            2. size: size
-            3. x: x coordinate
-            4. y: y coordinate
+           *args: Non key-word arguments
+                1. id: id
+                2. size: size
+                3. x: x coordinate
+                4. y: y coordinate
+            *kwargs: Key-word arguments
         """
         if args and len(args) != 0:
             count = 0
