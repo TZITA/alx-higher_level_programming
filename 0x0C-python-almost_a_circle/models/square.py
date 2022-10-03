@@ -28,7 +28,7 @@ class Square(Rectangle):
             raise TypeError("width must be an integer")
         elif value <= 0:
             raise ValueError("width must be > 0")
-        
+
         self.width = value
         self.height = value
 
@@ -57,7 +57,7 @@ class Square(Rectangle):
                 elif count == 3:
                     self.y = arg
                 count += 1
-        
+
         elif kwargs and len(kwargs) != 0:
             for k, v in kwargs.items():
                 if k == "id":
@@ -78,7 +78,7 @@ class Square(Rectangle):
                 "y": self.y
                 }
 
-
     def __str__(self):
         """Str rep of a square obj."""
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.size)
+        return "[Square] ({}) {}/{} - {}".format(self.id,
+                                                 self.x, self.y, self.size)
