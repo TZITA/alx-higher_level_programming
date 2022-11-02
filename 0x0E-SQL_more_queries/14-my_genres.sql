@@ -2,7 +2,7 @@
 SELECT gr.`name`
   FROM `tv_genres` AS gr
        INNER JOIN `tv_show_genres` AS st
-       ON gr.`id` = s.`genre_id`
+       ON gr.`id` = st.`genre_id`
 
        INNER JOIN `tv_shows` AS tv
        ON tv.`id` = st.`show_id`
