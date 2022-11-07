@@ -1,4 +1,5 @@
- -- Lists all genres of the show Dexter in the database hbtn_0d_tvshows.
+-- Lists all genres of the show Dexter in the database hbtn_0d_tvshows.
+
 SELECT gr.`name`
   FROM `tv_genres` AS gr
        INNER JOIN `tv_show_genres` AS st
