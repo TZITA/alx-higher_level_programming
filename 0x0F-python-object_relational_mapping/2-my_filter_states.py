@@ -5,7 +5,6 @@ import MySQLdb
 conn = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
 
 c = conn.cursor()
-c.execute("SELECT * FROM states")
+c.execute("SELECT * FROM states WHERE name = '{}'".format(sys.argv[4]))
 for st in c.fetchall():
-    if (st[1] == sys.argv[4]):
-        print(st)
+    print(st)
