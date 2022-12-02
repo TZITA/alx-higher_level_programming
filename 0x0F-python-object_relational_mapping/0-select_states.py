@@ -8,8 +8,8 @@ import MySQLdb
 
 if __name__ == '__main__':
     conn = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2],
-                           port=3306, db=sys.argv[3])
+                           db=sys.argv[3])
     c = conn.cursor()
     c.execute("SELECT * FROM `states`")
     for state in c.fetchall():
-       print(r)
+        print(r)
