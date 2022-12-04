@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Displays values in states where name matches argument. Safe from MySQL injections!"""
 import sys
 import MySQLdb
 
