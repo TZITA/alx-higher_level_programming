@@ -4,8 +4,8 @@ import MySQLdb
 
 
 if __name__ == '__main__':
-    conn = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
-    c = conn.cursor()
+    co = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+    c = co.cursor()
     c.execute("SELECT c.id, c.name, s.name \
             FROM states AS s \
             INNER JOIN cities \
