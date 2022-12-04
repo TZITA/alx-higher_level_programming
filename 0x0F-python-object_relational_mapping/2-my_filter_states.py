@@ -3,9 +3,11 @@
 import sys
 import MySQLdb
 
+if __name__ == '__main__':
+    co = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+    c = conn.cursor()
 
-conn = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
-c = conn.cursor()
-c.execute("SELECT * FROM states WHERE name = '{}' ORDER BY states.id".format(sys.argv[4]))
-for st in c.fetchall():
-    print(st)
+    c.execute("SELECT * FROM states WHERE name = '{}' ORDER BY states.id".
+              format(sys.argv[4]))
+    for st in c.fetchall():
+        print(st)
