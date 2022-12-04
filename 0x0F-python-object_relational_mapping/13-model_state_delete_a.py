@@ -12,7 +12,7 @@ if __name__ == '__main__':
                            pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    
+
     state = session.query(State).filter(State.name.contains('a'))
     for s in state:
         session.delete(s)
