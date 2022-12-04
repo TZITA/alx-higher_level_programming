@@ -11,5 +11,3 @@ if __name__ == '__main__':
               format(sys.argv[4]))
     for st in c.fetchall():
         print(st)
-    c.close()
-    co.close()
