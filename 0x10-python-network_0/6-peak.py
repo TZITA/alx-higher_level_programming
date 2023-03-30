@@ -8,5 +8,9 @@ def find_peak(list_of_integers):
         return None
     else:
         set_l = set(list_of_integers)
-        s_list = sorted(list(set_l))
-        return s_list[len(s_list) - 1]
+        list_a = list(set_l)
+        peak = list_a[0]
+        for i in range(1, len(list_a)):
+            if list_a[i] > peak:
+                peak = list_a[i]
+        return peak
