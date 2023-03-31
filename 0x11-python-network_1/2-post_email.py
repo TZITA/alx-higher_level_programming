@@ -5,13 +5,13 @@
     body of the response (decoded in utf-8).
 """
 import sys
-import urllib.request
+from urllib.request import urlopen
+from urllib.parse import urlencode
 
 
 if __name__ == '__main__':
     val = {"email": sys.argv[2]}
-    d = urllib.parse.urlencode(val).encode("ascii")
+    d = urlencode(val).encode("ascii")
 
-    request = urllib.request.Request(sys.argv[1], d)
-    with urllib.request.urlopen(request) as res:
+    with urlopen(sys.argv[1], d) as res:
         print(res.read().decode("utf-8"))
