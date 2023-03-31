@@ -7,5 +7,14 @@ import sys
 
 
 if __name__ == "__main__":
-    res = requests.get('https://api.github.com/users/{}'.format(sys.argv[1])).json()
-    print(res['id'])
+    username = sys.argv[1]
+    passwd = sys.argv[2]
+
+    url = 'https://api,github.com/user'
+    res = requests.get(url, auth=(username, passwd))
+
+    if res.status_code == 200:
+        response = res.json()
+        print(response['id'])
+    else:
+        print("None")
