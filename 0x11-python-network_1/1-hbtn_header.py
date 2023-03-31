@@ -5,11 +5,10 @@
     found in the header of the response.
 """
 import sys
-import urllib.request
+from urllib.request import urlopen
 
 
 if __name__ == '__main__':
-    r = urllib.request.Request(sys.argv[1])
-    with urllib.request.urlopen(r) as res:
-        result = dict(res.headers).get("X-Request-Id")
-        print("{}".format(result))
+    with urlopen(sys.argv[1]) as res:
+        result = res.headers
+        print(result['X-Request-Id'])
