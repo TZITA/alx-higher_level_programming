@@ -9,8 +9,7 @@ import requests
 
 if __name__ == "__main__":
     res = requests.get(sys.argv[1])
-    result = res.headers['X-Request-Id']
-    if result:
-        print(result)
+    if "X-Request-Id" in res.headers.keys():
+        print(res.headers["X-Request-Id"])
     else:
         pass
