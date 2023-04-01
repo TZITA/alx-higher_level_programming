@@ -8,11 +8,11 @@ import requests
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 0:
+    if len(sys.argv) == 2:
         val = sys.argv[1]
         res = requests.post('http://0.0.0.0:5000/search_user', data={"q": val})
     else:
-        res = requests.post('http://0.0.0.0:5000/search_user', data={"q": ""})
+        res = requests.post('http://0.0.0.0:5000/search_user')
     try:
         json_d = res.json()
         if json_d == {}:
