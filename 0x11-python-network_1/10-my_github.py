@@ -8,10 +8,8 @@ import sys
 
 if __name__ == "__main__":
     username = sys.argv[1]
-    passwd = sys.argv[2]
 
-    url = 'https://api,github.com/user'
-    res = requests.get(url, auth=(username, passwd))
+    res = requests.get(f"https://api,github.com/user/{username}")
 
     if res.status_code == 200:
         response = res.json()

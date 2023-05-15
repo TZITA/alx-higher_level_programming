@@ -14,4 +14,8 @@ A JS script that display the status code of a GET request.
 
 ## Task 3:
 ## Star wars movie title
-A JS script hat prints the title of a Star Wars movie where the episode number matches a given integer. 
+A JS script hat prints the title of a Star Wars movie where the episode number matches a given integer.
+
+## Task 4:
+## Star wars Wedge Antilles
+A JS script that prints the number of movies where the character /Wedge Antilles/ is present.
